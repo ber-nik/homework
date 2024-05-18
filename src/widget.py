@@ -19,3 +19,4 @@ def get_date(date: str) -> str:
     new_date = ".".join(date_list[::-1])
 
     return new_date
+

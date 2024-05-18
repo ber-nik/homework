@@ -6,5 +6,5 @@ def mask_card_number(card: str) -> str:
 
 def mask_account_number(account: str) -> str:
     """функция принимает номер счета и возвращает его зашифрованным"""
-    masked_number = f"**{account[-4:]}"
-    return masked_number
+    masked_acc = f"**{account[-4:]}"
+    return masked_acc
