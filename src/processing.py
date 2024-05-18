@@ -9,3 +9,4 @@ def sorted_by_date(dicst_list: list) -> list:
     отсортированы по убыванию даты (ключ date)."""
     sorted_dicts = sorted(dicst_list, key=lambda x: x['date'], reverse=True)
     return sorted_dicts
+
