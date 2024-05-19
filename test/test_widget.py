@@ -1,7 +1,9 @@
 import pytest
-from src.widget import mask_account_card, get_date
+from src.widget import get_date, mask_account_card
 
-@pytest.mark.parametrize("number, result",
+
+@pytest.mark.parametrize(
+    "number, result",
     [
         ("Maestro 1596837868705199", "Maestro 1596 83** **** 5199"),
         ("Счет 64686473678894779589", "Счет **9589"),
@@ -13,16 +15,17 @@ from src.widget import mask_account_card, get_date
         ("Счет 73654108430135874305", "Счет **4305"),
     ],
 )
-
 def test_mask_account_card(number, result):
     assert mask_account_card(number) == result
 
 
-@pytest.mark.parametrize("date, result", [
+@pytest.mark.parametrize(
+    "date, result",
+    [
         ("2018-07-11T02:26:18.671407", "11.07.2018"),
         ("2019-07-03T18:35:29.512364", "03.07.2019"),
         ("2018-06-30T02:08:58.4255722", "30.06.2018"),
- ],)
-
+    ],
+)
 def test_get_date(date, result):
     assert get_date(date) == result

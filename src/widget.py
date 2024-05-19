@@ -14,9 +14,9 @@ def mask_account_card(number: str) -> str:
 
 
 def get_date(date: str) -> str:
-    """Функүиә принимает строку записи даты и форматирует ее"""
+    """Функүия принимает строку записи даты и форматирует ее"""
     date_list = date[0:10].split("-")
-    new_date = ".".join(date_list[::-1])
+    result = ".".join(date_list[::-1])
 
-    return new_date
+    return result
 
