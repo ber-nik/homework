@@ -51,7 +51,7 @@ def dicst_list():
 
 
 @pytest.fixture
-def transaction():
+def transactions():
     return [
         {
             "id": 939719570,
