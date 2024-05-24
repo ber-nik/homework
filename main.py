@@ -3,9 +3,12 @@ from src.processing import filter_by_state, sorted_by_date
 from src.widget import get_date, mask_account_card
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
+
 print(mask_card_number("Maestro 1596837868705199"))
 print(mask_account_card("Счет 73654108430135874305"))
 print(get_date("2018-07-11T02:26:18.671407"))
+
+print()
 
 print(
     filter_by_state(
@@ -27,6 +30,8 @@ print(
         ]
     )
 )
+
+print()
 
 
 transactions = [
