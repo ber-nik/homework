@@ -11,6 +11,7 @@ def log(filename: Optional[str] = None) -> Callable:
         @wraps(func)
         def inner(*args: tuple, **kwargs: dict) -> Any:
 
+            global log_str
             try:
                 result = func(*args, **kwargs)
                 log_str = f"{func.__name__} ok. Result: {result}"
