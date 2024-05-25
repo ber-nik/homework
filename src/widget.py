@@ -12,10 +12,10 @@ def mask_account_card(number: str) -> str:
 
     return result
 
+
 def get_date(date: str) -> str:
     """Функүия принимает строку записи даты и форматирует ее"""
     date_list = date[0:10].split("-")
     result = ".".join(date_list[::-1])
 
     return result
-
