@@ -1,8 +1,8 @@
+from src.decorators import log
+from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 from src.masks import mask_card_number
 from src.processing import filter_by_state, sorted_by_date
 from src.widget import get_date, mask_account_card
-from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
-from src.decorators import log
 
 print(mask_card_number("Maestro 1596837868705199"))
 print(mask_account_card("Счет 73654108430135874305"))
@@ -100,13 +100,16 @@ print()
 
 @log(filename="mylog.txt")
 def my_function(x, y):
+    """Функция вызова декоратора без файла сохранения и вывод в консоль."""
     return x + y
 
 
 my_function(1, 2)
 
+
 @log(filename="mylog.txt")
 def my_function_error(x, y):
+    """Функция вызова декоратора с ошибкой и сохранением файлом сохранения mylog.txt"""
     return x / y
 
 

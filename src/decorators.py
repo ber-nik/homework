@@ -10,8 +10,7 @@ def log(filename: Optional[str] = None) -> Callable:
     def wrapper(func: Callable) -> Callable:
         @wraps(func)
         def inner(*args: tuple, **kwargs: dict) -> Any:
-
-            global log_str
+            log_str = ""
             try:
                 result = func(*args, **kwargs)
                 log_str = f"{func.__name__} ok. Result: {result}"
