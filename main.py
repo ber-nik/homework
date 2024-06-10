@@ -1,10 +1,10 @@
 from src.decorators import log
+from src.external_api import get_transactions
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 from src.masks import mask_card_number
 from src.processing import filter_by_state, sorted_by_date
+from src.utils import get_jcon_transactions
 from src.widget import get_date, mask_account_card
-from src.external_api import get_transactions
-from src.utils  import get_jcon_transactions
 
 print(mask_card_number("Maestro 1596837868705199"))
 print(mask_account_card("Счет 73654108430135874305"))
@@ -115,11 +115,11 @@ my_function(1, 2)
 #     return x / y
 
 
-#my_function_error(3, 0)
+# my_function_error(3, 0)
 
 print()
 
-file_path = r'C:\Users\ЗС\work\tmp\homework\data\operations.json'
+file_path = r"C:\Users\ЗС\work\tmp\homework\data\operations.json"
 a = get_jcon_transactions(file_path)
 b = get_transactions(a)
 print(b)
