@@ -2,7 +2,7 @@ import json
 from json import JSONDecodeError
 
 
-def get_jcon_transactions(file_path: str) -> list[dict] or []:
+def get_json_transactions(file_path: str) -> list[dict] or []:
     """Функция принимает на вход путь до JSON-файла и возвращает список словарей с данными
     о финансовых транзакциях."""
     try:
