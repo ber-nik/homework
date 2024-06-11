@@ -3,7 +3,7 @@ from src.external_api import get_transactions
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 from src.masks import mask_card_number
 from src.processing import filter_by_state, sorted_by_date
-from src.utils import get_jcon_transactions
+from src.utils import get_json_transactions
 from src.widget import get_date, mask_account_card
 
 print(mask_card_number("Maestro 1596837868705199"))
@@ -120,6 +120,6 @@ my_function(1, 2)
 print()
 
 file_path = r"C:\Users\ЗС\work\tmp\homework\data\operations.json"
-a = get_jcon_transactions(file_path)
+a = get_json_transactions(file_path)
 b = get_transactions(a)
 print(b)

@@ -14,5 +14,5 @@ def get_json_transactions(file_path: str) -> list[dict] or []:
 
 if __name__ == "__main__":
     file_path = r"C:\Users\ЗС\work\tmp\homework\data\operations.json"
-    transactions = get_jcon_transactions(file_path)
+    transactions = get_json_transactions(file_path)
     print(transactions)
