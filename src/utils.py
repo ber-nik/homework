@@ -1,10 +1,11 @@
 import json
 from json import JSONDecodeError
 import logging
+import pandas as pd
 
 logger = logging.getLogger("utils")
 logger.setLevel(logging.INFO)
-file_handler = logging.FileHandler("logs/ utils.log")
+file_handler = logging.FileHandler("logs/utils.log")
 file_formater = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: %(message)s")
 file_handler.setFormatter(file_formater)
 logger.addHandler(file_handler)
@@ -30,3 +31,13 @@ if __name__ == "__main__":
     file_path = r"C:\Users\ЗС\work\tmp\homework\data\operations.json"
     transactions = get_json_transactions(file_path)
     print(transactions)
+
+
+def read_csv(file_path):
+    """Считывает данные из CSV файла и возвращает DataFrame."""
+    return pd.read_csv(file_path)
+
+
+def read_xlsx(file_path):
+    """Считывает данные из XLSX файла и возвращает DataFrame."""
+    return pd.read_excel(file_path, engine="openpyxl")
