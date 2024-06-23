@@ -120,6 +120,6 @@ my_function(1, 2)
 print()
 
 file_path = r"C:\Users\ЗС\work\tmp\homework\data\operations.json"
-a = get_json_transactions(file_path)
-b = get_transactions(a)
-print(b)
+transactions = get_json_transactions(file_path)
+print(transactions)
+
